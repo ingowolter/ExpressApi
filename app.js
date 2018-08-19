@@ -1,10 +1,6 @@
-let express = require('express');
-let app = express();
+let app = require('./init');
+let routes = require('./routes/routes');
 
-const port = 8000;
+routes(app.express);
 
-app.use(express.static('./public'));
-
-app.get('/', (req, res) => res.send('<h1>Hello, Express!</h1>'));
-
-app.listen(port, ()=> console.log(`Listening at http://localhost:${port}`));
+app.start();
