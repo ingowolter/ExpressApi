@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <title>My guitars - <%= guitar.name %></title>
+</head>
+<body>
+    <% include ../partials/header %>
+    <main>
+        <div class="container">
+            <h2><%= guitar.name %></h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-fluid" src="/img/guitars/<%= guitar.id%>.jpg"/>
+                        <ul>
+                            <li>manufacturer: <%= guitar.manufacturer %></li>
+                            <li>Year: <%= guitar.year %></li>
+                            <li>Neck: <%= guitar.neck %></li>
+                            <li>Fingertboard: <%= guitar.fingerboard %></li>
+                            <li>Frets: <%= guitar.frets %></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+        </div>    
+    </main>
+    <% include ../partials/footer %>    
+</body>
+</html>
